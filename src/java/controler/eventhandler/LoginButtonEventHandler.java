@@ -18,33 +18,29 @@ public class LoginButtonEventHandler implements EventHandler {
     private Stage window;
 
 
-    public LoginButtonEventHandler(LoginView loginView,Stage window) {
-        this.loginView=loginView;
-        this.window=window;
+    public LoginButtonEventHandler(LoginView loginView, Stage window) {
+        this.loginView = loginView;
+        this.window = window;
     }
 
     @Override
     public void handle(Event event) {
-        username=loginView.getUsernameTF().getText();
-        password=loginView.getPasswordTF().getText();
+        username = loginView.getUsernameTF().getText();
+        password = loginView.getPasswordTF().getText();
 
-        if(username.equals("bojan")){
-            Scene scene = new Scene(new UserView(),300,200);
+        if (username.equals("bojan")) {
+            Scene scene = new Scene(new UserView(), 300, 200);
             window.setScene(scene);
-        }
-        else if(username.equals("knjigovodja")){
-            Scene scene = new Scene(new KnjigovodjaView(),300,200);
+        } else if (username.equals("knjigovodja")) {
+            Scene scene = new Scene(new KnjigovodjaView(), 300, 200);
             window.setScene(scene);
-        }
-        else if(username.equals("racunovodja")){
-            Scene scene = new Scene(new RacunovodjaView(),300,200);
+        } else if (username.equals("racunovodja")) {
+            Scene scene = new Scene(new RacunovodjaView(), 300, 200);
             window.setScene(scene);
-        }
-        else{
+        } else {
             Alert alert = new WrongUsernameOrPasswordAlert(Alert.AlertType.ERROR);
             alert.showAndWait();
         }
-
 
 
     }

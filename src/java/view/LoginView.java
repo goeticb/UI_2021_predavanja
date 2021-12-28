@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class LoginView extends VBox{
+public class LoginView extends VBox {
 
     private Label usernameLabel;
     private Label passwordLabel;
@@ -17,18 +17,18 @@ public class LoginView extends VBox{
     private TextField passwordTF;
     private Button loginButton;
 
-    public LoginView(Stage window){
-        this.setPadding(new Insets(10,10,10,10));
+    public LoginView(Stage window) {
+        this.setPadding(new Insets(10, 10, 10, 10));
         this.setSpacing(10);
-        usernameLabel= new Label("Username:");
+        usernameLabel = new Label("Username:");
         usernameTF = new TextField();
         usernameTF.setPromptText("username");
         passwordLabel = new Label("Password:");
         passwordTF = new PasswordField();
         passwordTF.setPromptText("password");
         loginButton = new Button("Login");
-        this.getChildren().addAll(usernameLabel,usernameTF,passwordLabel,passwordTF,loginButton);
-        loginButton.setOnAction(new LoginButtonEventHandler(this,window));
+        this.getChildren().addAll(usernameLabel, usernameTF, passwordLabel, passwordTF, loginButton);
+        loginButton.setOnAction(new LoginButtonEventHandler(this, window));
     }
 
     public Label getUsernameLabel() {
