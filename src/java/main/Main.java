@@ -15,6 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         window = primaryStage;
         window.setTitle("UI_2021");
         Scene scene = new Scene(new LoginView(window), 300, 200);
